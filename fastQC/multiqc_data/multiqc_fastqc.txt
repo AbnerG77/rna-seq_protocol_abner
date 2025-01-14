@@ -1,0 +1,10 @@
+Sample	Filename	File type	Encoding	Total Sequences	Sequences flagged as poor quality	Sequence length	%GC	total_deduplicated_percentage	avg_sequence_length	basic_statistics	per_base_sequence_quality	per_sequence_quality_scores	per_base_sequence_content	per_sequence_gc_content	per_base_n_content	sequence_length_distribution	sequence_duplication_levels	overrepresented_sequences	adapter_content	per_tile_sequence_quality
+SRR10207204_1	SRR10207204_1.fastq	Conventional base calls	Sanger / Illumina 1.9	11645096.0	0.0	101.0	45.0	61.01309496549716	101.0	pass	fail	pass	fail	pass	fail	pass	warn	pass	pass	
+SRR10207204_2	SRR10207204_2.fastq	Conventional base calls	Sanger / Illumina 1.9	11645096.0	0.0	101.0	45.0	50.827037109552386	101.0	pass	pass	pass	fail	pass	pass	pass	warn	pass	pass	
+SRR10207206_1	SRR10207206_1.fastq	Conventional base calls	Sanger / Illumina 1.9	16360188.0	0.0	101.0	45.0	49.12572257311635	101.0	pass	pass	pass	fail	pass	pass	pass	fail	pass	pass	pass
+SRR10207206_2	SRR10207206_2.fastq	Conventional base calls	Sanger / Illumina 1.9	16360188.0	0.0	101.0	45.0	49.30634912595575	101.0	pass	pass	pass	fail	pass	pass	pass	fail	pass	pass	pass
+SRR10207210_1	SRR10207210_1.fastq	Conventional base calls	Sanger / Illumina 1.9	10377083.0	0.0	101.0	44.0	54.792651471137255	101.0	pass	pass	pass	fail	pass	pass	pass	warn	pass	pass	pass
+SRR10207210_2	SRR10207210_2.fastq	Conventional base calls	Sanger / Illumina 1.9	10377083.0	0.0	101.0	44.0	55.461384310409365	101.0	pass	pass	pass	fail	pass	pass	pass	warn	pass	pass	pass
+SRR10207212_1	SRR10207212_1.fastq	Conventional base calls	Sanger / Illumina 1.9	8601275.0	0.0	101.0	45.0	68.21462468946916	101.0	pass	fail	pass	fail	pass	fail	pass	warn	pass	pass	
+SRR10207212_2	SRR10207212_2.fastq	Conventional base calls	Sanger / Illumina 1.9	8601275.0	0.0	101.0	45.0	59.09596355409027	101.0	pass	pass	pass	fail	pass	pass	pass	warn	pass	pass	
+SRR10207216_1	SRR10207216_1.fastq	Conventional base calls	Sanger / Illumina 1.9	3343803.0	0.0	101.0	44.0	64.78688524603045	101.0	pass	pass	pass	fail	pass	pass	pass	warn	pass	pass	pass

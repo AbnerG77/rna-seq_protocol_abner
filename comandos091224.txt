@@ -1,0 +1,983 @@
+    1  history -h
+    2  history 10
+    3  cd coding/
+    4  ls
+    5  nano conserved-motfs.py 
+    6  python conserved-motfs.py BOX181-aln.fasta 
+    7  exit
+    8  cd coding/
+    9  ls
+   10  nano pssm.py 
+   11  python pssm.py BOX214.fasta 
+   12  exit
+   13  ./gatk FuncotatorDataSourceDownloader --somatic --validate-integrity --extract-after-download
+   14  cd ../..
+   15  ls
+   16  head AlphaMissense_isoforms_aa_substitutions.tsv 
+   17  grep 'ENST00000407022.7' AlphaMissense_isoforms_aa_substitutions.tsv 
+   18  grep 'ENST00000407022.7.*A212P' AlphaMissense_isoforms_aa_substitutions.tsv 
+   19  grep 'ENST00000407022.7.*N88S' AlphaMissense_isoforms_aa_substitutions.tsv 
+   20  grep 'ENST00000407022.7.*S90L' AlphaMissense_isoforms_aa_substitutions.tsv
+   21  grep 'ENST00000278893.11.*A212P' AlphaMissense_isoforms_aa_substitutions.tsv 
+   22  grep 'ENST00000278893.11.*N88G' AlphaMissense_isoforms_aa_substitutions.tsv 
+   23  grep 'ENST00000278893.11.*S90L' AlphaMissense_isoforms_aa_substitutions.tsv 
+   24  grep 'ENST00000360796.10.*A276P' AlphaMissense_isoforms_aa_substitutions.tsv 
+   25  grep 'ENST00000360796.9.*' AlphaMissense_isoforms_aa_substitutions.tsv 
+   26  grep 'ENST0000036079' AlphaMissense_isoforms_aa_substitutions.tsv | wc -l 
+   27  grep 'ENST00000360796' AlphaMissense_isoforms_aa_substitutions.tsv | wc -l 
+   28  grep 'ENST00000360796.' AlphaMissense_isoforms_aa_substitutions.tsv | wc -l
+   29  grep 'ENST00000360796.' AlphaMissense_isoforms_aa_substitutions.tsv | head -n 50
+   30  grep 'ENST00000360796.' AlphaMissense_isoforms_aa_substitutions.tsv | tail -n 50
+   31  history 12
+   32  history 15
+   33  history 25
+   34  sh get_mutations.sh 
+   35  wget https://rest.uniprot.org/uniprotkb/Q96G97-4.fasta
+   36  wget https://rest.uniprot.org/uniprotkb/Q96G97-3.fasta
+   37  wget https://rest.uniprot.org/uniprotkb/Q96G97-2.fasta
+   38  history 5
+   39  sh get_uniprot_sequences.sh 
+   40  wget
+   41  wget --help
+   42  sh get_uniprot_sequences.sh 
+   43  ls *.maf > list
+   44  ls
+   45  mv Base_33Tecidos_AlphaMissense.tsv PDB_Base_33Tecidos_AlphaMissense.tsv
+   46  ls
+   47  wc -l PDB_Base_33Tecidos_AlphaMissense.tsv 
+   48  wc -l Base_33TecidosAlphaFold_AlphaMissense.tsv 
+   49  head PDB_Base_33Tecidos_AlphaMissense.tsv 
+   50  head -n1 PDB_Base_33Tecidos_AlphaMissense.tsv > PDBhead 
+   51  head -n1 Base_33TecidosAlphaFold_AlphaMissense.tsv > AFhead 
+   52  sh prepare_maf.sh 
+   53  cd /media/
+   54  ls
+   55  cd jpmslima/
+   56  cd data3
+   57  ls
+   58  grep ´P04035´ AlphaMissense_aa_substitutions.tsv 
+   59  grep P04035 AlphaMissense_aa_substitutions.tsv 
+   60  exit
+   61  ls
+   62  python edit_maf_sample.py --maf_file_path 7HC_32GC194_variants.funcotated.maf --target_value __UNKNOWN__ 32GC194
+   63  python edit_maf_sample.py 7HC_32GC194_variants.funcotated.maf __UNKNOWN__ 32GC194
+   64  python maf-edit-samples-center.py --maf_file_path 7HC_32GC194_variants.funcotated.maf --real_sample_name 32GC194 --center_name UFC-Brazil
+   65  head 7HC_32GC194_variants.funcotated.maf 
+   66  ls
+   67  sh prepare_maf.sh 
+   68  bcftools query -l 0000.vcf 
+   69  sh prepare_maf.sh 
+   70  bcftools query -l 0000.vcf 
+   71  cd ..
+   72  ls
+   73  head GC_UFC.tsv 
+   74  head GC_UFC.csv 
+   75  cd 7HC/
+   76  ls
+   77  python edit_maf_sample.py --maf_file_path 7HC_32:GC194_variants.funcotated.maf --target_value __UNKNOWN__ 32:GC194
+   78  python maf-edit-samples-center.py --maf_file_path 7HC_32:GC194_variants.funcotated.maf --real_sample_name 32:GC194 --center_name UFC-Brazil
+   79  python edit_maf_sample.py 7HC_32:GC194_variants.funcotated.maf __UNKNOWN__ 32:GC194
+   80  python maf-edit-samples-center.py --maf_file_path 7HC_32:GC194_variants.funcotated.maf --real_sample_name 32:GC194 --center_name UFC-Brazil
+   81  python edit_maf_sample.py 7HC_32:GC194_variants.funcotated.maf 32GC194 32:GC194
+   82  python maf-edit-samples-center.py --maf_file_path 7HC_32:GC194_variants.funcotated.maf --real_sample_name 32:GC194 --center_name UFC-Brazil
+   83  cd ..
+   84  cd DV7/
+   85  sh prepare_maf.sh 
+   86  ls
+   87  ls *.maf > list
+   88  sh prepare_maf.sh 
+   89  ls
+   90  cd ..
+   91  cd DV7/
+   92  ls
+   93  sh prepare_maf.sh 
+   94  bcftools query -l 0000.vcf
+   95  ls
+   96  python edit_maf_sample.py DV7_32:GC194_variants.funcotated.maf GCB-194 32:GC194 
+   97  python maf-edit-samples-center.py --maf_file_path DV7_32:GC194_variants.funcotated.maf --real_sample_name 32:GC194 --center_name UFC-Brazil 
+   98  cd
+   99  ls
+  100  sudo fwupdmgr get-upgrades
+  101  exit
+  102  ssh jpmslima@10.7.41.184 -p4422
+  103  ls
+  104  sh get_uniprot_sequences.sh 
+  105  ls
+  106  grep 'SSBOND' 5z62.pdb
+  107  grep 'SSBOND' 7jro.pdb
+  108  grep 'SSBOND' 7o37.pdb
+  109  ls
+  110  grep 'SSBOND' pdb8d4t.ent 
+  111  grep 'SSBOND' 7o37.cif
+  112  grep 'ssbond' 7o37.cif
+  113  grep 'disulf' 7o37.cif
+  114  ls
+  115  history | grep efetch
+  116  efetch -db prot -id ABR93038.1 -format fasta_cds_na
+  117  grep '88:_SER' model.pdb_ringNodes 
+  118  grep '152:_SER' model.pdb_ringNodes 
+  119  grep '152:_:SER' model.pdb_ringNodes 
+  120  grep ':_:ASN' undefined_ringNodes.txt 
+  121  grep '88:_:ASN' 6ds5.cif_ringNodes 
+  122  grep '88:_:ASN' 6ds5.cif_ringEdges 
+  123  docker run -p 5000:5000 --device /dev/fuse --cap-add SYS_ADMIN --security-opt apparmor:unconfined -it maayanlab/appyter-enrichment_analysis_visualizer:0.2.6-0.19.17 appyter fetch-and-serve https://appyters.maayanlab.cloud/Enrichment_Analysis_Visualizer/45681ae6b16253e35f1200c77b4390bcbd13b8ea/
+  124  docker run --herlp
+  125  docker run --help
+  126  sudo docker run -p 5000:5000 --device /dev/fuse --cap-add SYS_ADMIN --security-opt apparmor:unconfined -it maayanlab/appyter-enrichment_analysis_visualizer:0.2.6-0.19.17 appyter fetch-and-serve https://appyters.maayanlab.cloud/Enrichment_Analysis_Visualizer/45681ae6b16253e35f1200c77b4390bcbd13b8ea/
+  127  y
+  128  pip install tqdm
+  129  sudo apt install tqdm
+  130  uname -r
+  131  echo "# Creatine" >> README.md
+  132  git init
+  133  git add README.md 
+  134  git commit -m "First commit"
+  135  git branch -M main
+  136  git remote add origin https://github.com/jpmslima/Creatine.git
+  137  git push -u origin main
+  138  htop
+  139  pwd
+  140  git reset
+  141  git pull
+  142  git pull origin master --allow-unrelated-histories
+  143  git reset
+  144  git config http.postBuffer 524288000
+  145  ls
+  146  grep 'IGF1' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv 
+  147  grep 'IGF1' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  148  grep 'GATM' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  149  grep 'SLC6A8' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  150  grep 'AKT1' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  151  grep 'AKT2' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  152  grep 'AKT3' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  153  grep 'PSMB5' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  154  grep 'PSMD3' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  155  grep 'SGK1' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  156  grep 'PRPS1' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  157  grep 'CKB' CTD_gene_diseases_inferred_Kidney-CTD.tsv 
+  158  grep 'CKB' CTD_gene_diseases_inferred_Kidney-CTD.tsv | wc -l
+  159  grep 'CKMT1A' CTD_gene_diseases_inferred_Kidney-CTD.tsv | wc -l
+  160  grep 'CKMT1B' CTD_gene_diseases_inferred_Kidney-CTD.tsv | wc -l
+  161  grep 'CKMT2' CTD_gene_diseases_inferred_Kidney-CTD.tsv | wc -l
+  162  grep 'SLC16A12' CTD_gene_diseases_inferred_Kidney-CTD.tsv | wc -l
+  163  grep 'SLC6A8' CTD_gene_diseases_inferred_Kidney-CTD.tsv | wc -l
+  164  python UniqueDiseaseIDs.py 
+  165  grep 'Q96G97' AlphaMissense_aa_substitutions.tsv > all
+  166  grep 'Pathogenic' all | wc -l
+  167  grep 'pathogenic' all | wc -l
+  168  grep 'benign' all | wc -l
+  169  grep 'ambiguos' all | wc -l
+  170  grep 'ambiguous' all | wc -l
+  171  ls
+  172  grep 'Homo sapiens' CTD_gene_chems_curated_CTD-list.tsv 
+  173  grep 'Homo sapiens' CTD_gene_cgixns_1713266196128.tsv 
+  174  history | grep grep
+  175  grep 'Homo sapiens.*decreased' CTD_gene_cgixns_1713266196128.tsv 
+  176  grep 'Homo sapiens.*decreases^expression' CTD_gene_cgixns_1713266196128.tsv 
+  177  grep 'Homo sapiens' CTD_gene_diseases_inferred_CTD-list.tsv 
+  178  grep 'Kidney' CTD_gene_diseases_inferred_CTD-list.tsv 
+  179  grep 'renal' CTD_gene_diseases_inferred_CTD-list.tsv 
+  180  grep 'Kidney' CTD_gene_diseases_inferred_1713266126277.tsv 
+  181  grep 'SLC2A4' CTD_gene_diseases_inferred_1713266126277.tsv 
+  182  grep 'SLC2A4' CTD_gene_diseases_inferred_1713266126277.tsv | wc -l
+  183  wc -l CTD_gene_diseases_inferred_1713266126277.tsv 
+  184  wc -l CTD_gene_diseases_inferred_CTD-list.tsv 
+  185  grep 'Kidney' CTD_gene_diseases_inferred_1713266126277.tsv | wc -l
+  186  grep 'Kidney' CTD_gene_diseases_inferred_CTD-list.tsv | wc -l
+  187  grep 'Kidney' CTD_gene_diseases_inferred_1713266126277.tsv > CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv
+  188  grep -w 'renal' CTD_gene_diseases_inferred_1713266126277.tsv
+  189  grep -w 'renal' CTD_gene_diseases_inferred_1713266126277.tsv >> CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv
+  190  grep 'Kidney' CTD_gene_diseases_inferred_CTD-list.tsv > CTD_gene_diseases_inferred_Kidney-CTD.tsv
+  191  grep -w 'renal' CTD_gene_diseases_inferred_CTD-list.tsv >> CTD_gene_diseases_inferred_Kidney-CTD.tsv
+  192  grep 'SLC2A4' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv 
+  193  grep 'SLC2A4' CTD_gene_diseases_inferred_Kidney-Stitch-list.tsv | wc -l
+  194  python UniqueDiseaseIDs.py 
+  195  python DId-gene.py 
+  196  pip install ast
+  197  aptitude search ast
+  198  python DId-gene.py 
+  199  python Gene-DId-table.py 
+  200  python DId-gene.py && python Gene-DId-table.py
+  201  python commonDIds.py 
+  202  efetch --help
+  203  efetch -db mesh -id D007676 -format native 
+  204  efetch -db mesh -id D007676 -format native | head -n1
+  205  efetch -db mesh -id D007676 -format native | head -n2
+  206  grep -- help
+  207  grep --help
+  208  efetch -db mesh -id D007676 -format native | grep -n 2
+  209  head --help
+  210  cat --help
+  211  efetch -db mesh -id D007676 -format native | sed -n '2p'
+  212  echo efetch -db mesh -id D007676 -format native | sed -n '2p'
+  213  echo
+  214  echo Hello world
+  215  ls
+  216  sh meshs.sh 
+  217  aptitude search wacom
+  218  xswetwacom list devices
+  219  xsetwacom list devices
+  220  xsetwacom
+  221  xsetwacom -h
+  222  xsetwacom list parameters
+  223  xsetwacom list devices
+  224  xsetwacom set "Wacom One by Wacom S Pen stylus" Button 2 2
+  225  xsetwacom set "Wacom One by Wacom S Pen stylus" Button 2 4
+  226  xsetwacom set "Wacom One by Wacom S Pen stylus" Button 2 5
+  227  xev
+  228  xev -h
+  229  aptitude search easystroke
+  230  sudo apt install easystroke
+  231  sudo apt remove easystroke
+  232  sudo reboot
+  233  aptitude search wacom
+  234  neofetch
+  235  aptitude search kcm-
+  236  aptitude search kcm
+  237  xsetwacom list devices
+  238  xsetwacom list
+  239  pip install PySetWacom
+  240  pysetwacom
+  241  pip install wxPython
+  242  aptitude search wxPython
+  243  sudo apt install wxpython-tools 
+  244  pysetwacom
+  245  pip install PyGObject
+  246  python -m pip install PySetWacom
+  247  aptitude search libsdl
+  248  PySetWacom
+  249  pip install wxPython
+  250  pip install PyGObject
+  251  $ apt install g++ cmake extra-cmake-modules gettext libqt5x11extras5-dev qtdeclarative5-dev libkf5coreaddons-dev libkf5i18n-dev libkf5dbusaddons-dev libkf5globalaccel-dev libkf5config-dev libkf5xmlgui-dev libkf5notifications-dev plasma-framework-dev kdoctools-dev libxi-dev libwacom-dev
+  252  sudo apt install g++ cmake extra-cmake-modules gettext libqt5x11extras5-dev qtdeclarative5-dev libkf5coreaddons-dev libkf5i18n-dev libkf5dbusaddons-dev libkf5globalaccel-dev libkf5config-dev libkf5xmlgui-dev libkf5notifications-dev plasma-framework-dev kdoctools-dev libxi-dev libwacom-dev
+  253  aptitude search sway
+  254  echo $XDG_SESSION_TYPE
+  255  xsetwacom list devices
+  256  xsetwacom -s get "Wacom One by Wacom S Pen stylus" all
+  257  xsetwacom -s get "Wacom One by Wacom S Pen eraser" all
+  258  apt search wacom
+  259  sudo apt install libwacom-dev 
+  260  sudo apt autoremove
+  261  sudo groupadd -r uinput
+  262  sudo usermod -aG uinput $USER
+  263  echo 'KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"' | sudo tee /etc/udev/rules.d/60-weylus.rules
+  264  sudo reboot
+  265  cd Downloads/
+  266  ls
+  267  sudo apt install ./Weylus_0.11.4_amd64.deb 
+  268  sudo ufw allow 1701/tcp
+  269  sudo ufw allow 9001/tcp
+  270  ls
+  271  ls *.txt
+  272  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Tissues_table.txt 
+  273  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Cell-lines_table.txt 
+  274  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Azimuth_2023_table.txt 
+  275  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Azimuth_Cell_Types_2021_table.txt 
+  276  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Cancer_Cell_Line_Encyclopedia_table.txt 
+  277  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' CCLE_Proteomics_2020_table.txt 
+  278  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' CellMarker_2024_table.txt 
+  279  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' CellMarker_Augmented_2021_table.txt 
+  280  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Descartes_Cell_Types_and_Tissue_2021_table.txt 
+  281  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Down_table.txt 
+  282  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Up_table.txt 
+  283  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' GTEx_Tissues_V8_2023_table.txt 
+  284  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  285  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' HuBMAP_ASCT_plus_B_augmented_w_RNAseq_Coexpression_table.txt 
+  286  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Human_Gene_Atlas_table.txt 
+  287  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' MoTrPAC_2023_table.txt 
+  288  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Mouse_Gene_Atlas_table.txt 
+  289  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' NCI-60_Cancer_Cell_Lines_table.txt 
+  290  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' PanglaoDB_Augmented_2021_table.txt 
+  291  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ProteomicsDB_2020_table.txt 
+  292  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Tabula_Muris_table.txt 
+  293  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Tabula_Sapiens_table.txt 
+  294  awk -F'\t' '$1 ~ /renal/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Tissues_table.txt 
+  295  awk -F'\t' '$1 ~ /Renal/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Tissues_table.txt 
+  296  awk -F'\t' '$1 ~ /293F/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Cell-lines_table.txt 
+  297  awk -F'\t' '$1 ~ /HEK293/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Cell-lines_table.txt 
+  298  awk -F'\t' '$1 ~ /FLPIN/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Cell-lines_table.txt 
+  299  awk -F'\t' '$1 ~ /TREX/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Cell-lines_table.txt 
+  300  awk -F'\t' '$1 ~ /293/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Cell-lines_table.txt 
+  301  awk -F'\t' '$1 ~ /Renal/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Azimuth_2023_table.txt 
+  302  awk -F'\t' '$1 ~ /renal/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Azimuth_2023_table.txt 
+  303  grep KMRC3 Cancer_Cell_Line_Encyclopedia_table.txt 
+  304  head Cancer_Cell_Line_Encyclopedia_table.txt 
+  305  head KIDNEY Cancer_Cell_Line_Encyclopedia_table.txt 
+  306  grep KIDNEY Cancer_Cell_Line_Encyclopedia_table.txt 
+  307  head Azimuth_2023_table.txt 
+  308  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Azimuth_2023_table.txt 
+  309  more Azimuth_2023_table.txt 
+  310  more Azimuth_Cell_Types_2021_table.txt 
+  311  awk -F'\t' '$1 ~ /renal/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ProteomicsDB_2020_table.txt 
+  312  awk -F'\t' '$1 ~ /Renal/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ProteomicsDB_2020_table.txt 
+  313  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Tabula_Muris_table.txt 
+  314  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Tabula_Sapiens_table.txt 
+  315  more Tabula_Muris_table.txt 
+  316  awk -F'\t' '$1 ~ /renal/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Tissues_table.txt 
+  317  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Tissues_table.txt 
+  318  awk -F'\t' '$1 ~ /KIDNEY/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Tissues_table.txt 
+  319  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ARCHS4_Tissues_table.txt 
+  320  awk -F'\t' '$1 ~ /RENAL/ {print $1, $3, $4, $7, $8, $9}' ARCHS4_Tissues_table.txt 
+  321  awk -F'\t' '$1 ~ /PODOCYTE/ {print $1, $3, $4, $7, $8, $9}' ARCHS4_Tissues_table.txt 
+  322  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' ESCAPE_table.txt 
+  323  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' GTEx_Tissues_V8_2023_table.txt 
+  324  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Up_table.txt 
+  325  awk -F'\t' '$1 ~ /renal/ {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Up_table.txt 
+  326  awk -F'\t' '$1 ~ /renal/ {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Down_table.txt 
+  327  awk -F'\t' '$1 ~ /kidney/ {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Down_table.txt 
+  328  awk -F'\t' '$1 ~ /kidney/ {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Up_table.txt 
+  329  awk -F'\t' '$1 ~ /kidney/ && $5 <=0.05 {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Up_table.txt 
+  330  awk -F'\t' '$1 ~ /kidney/ && $5 <0.05 {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Up_table.txt 
+  331  awk -F'\t' '$1 ~ /kidney/ && $5 <= 0.05 {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Up_table.txt 
+  332  awk -F'\t' '$1 ~ /kidney/ && $3 <= 0.05 {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Up_table.txt 
+  333  awk -F'\t' '$1 ~ /kidney/ && $3 <= 0.05 {print $1, $3, $4, $7, $8, $9}' GTEx_Tissue_Expression_Down_table.txt 
+  334  head Cancer_Cell_Line_Encyclopedia_table.txt 
+  335  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Cancer_Cell_Line_Encyclopedia_table.txt 
+  336  head NCI-60_Cancer_Cell_Lines_table.txt 
+  337  ls
+  338  grep 'kidney' CellMarker_2024_table.txt 
+  339  grep 'Kidney' CellMarker_2024_table.txt 
+  340  grep 'renal' CellMarker_2024_table.txt 
+  341  grep 'Renal' CellMarker_2024_table.txt 
+  342  ls
+  343  grep 'Kidney' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  344  history | grep grep
+  345  grep 'Kidney.*0.0' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  346  awk -F'\t' '$1 == "Kidney" && $2 < 0.05' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  347  head HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  348  awk -F'\t' '$1 == "Kidney" && $3 < 0.05' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  349  awk -F'\t' '$3 < 0.05' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  350  awk -F'\t' '$1 == "Kidney" && $3 < 0.05' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  351  awk -F'\t' '$1 == "Kidney" & $3 < 0.05' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  352  awk -F'\t' '$1 ~/Kidney/ $& $3 < 0.05' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  353  awk -F'\t' '$1 ~ /Kidney/ $& $3 < 0.05' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  354  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  355  cat $1 HuBMAP_ASCTplusB_augmented_2022_table.txt | head
+  356  awk $1 HuBMAP_ASCTplusB_augmented_2022_table.txt | head
+  357  awk -F'\t' '$1 ~ /Kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' HuBMAP_ASCTplusB_augmented_2022_table.txt 
+  358  ls
+  359  sh CancerCellLines-Kidney.sh 
+  360  cd tables-Enrich/
+  361  ls
+  362  sh NCI-60-Kidney.sh 
+  363  awk -F'\t' '$1 ~ /ACHN/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' NCI-60_Cancer_Cell_Lines_table.txt 
+  364  sh NCI-60-Kidney.sh 
+  365  more NCI-60_results 
+  366  awk -F'\t' '$1 ~ /kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' MAGNET_2023_table.txt 
+  367  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' MAGNET_2023_table.txt 
+  368  ls
+  369  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' The_Kinase_Library_2023_table.txt 
+  370  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' The_Kinase_Library_2023_table.txt | head
+  371  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' The_Kinase_Library_2023_table.txt | head -n15
+  372  ls
+  373  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Kinase_Perturbations_from_GEO_up_table.txt | head -n10
+  374  head KEGG_2021_Human_table.txt 
+  375  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Kinase_Perturbations_from_GEO_down_table.txt | head -n10
+  376  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Phosphatase_Substrates_from_DEPOD_table.txt 
+  377  awk -F'\t' '$1 ~ /kidney/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Diabetes_Perturbations_GEO_2022_table.txt 
+  378  awk -F'\t' '$1 ~ /renal/ && $3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Diabetes_Perturbations_GEO_2022_table.txt 
+  379  awk -F'\t' '$3 < 0.05 {print $1, $3, $4, $7, $8, $9}' Diabetes_Perturbations_GEO_2022_table.txt 
+  380  cd Downloads/
+  381  sudo apt install ./rstudio-2024.04.0-735-amd64.deb 
+  382  pip install open-cravat
+  383  oc gui
+  384  ls
+  385  head Pred-AF-cleaned-AM-annot.tsv 
+  386  ls
+  387  cd Finais/
+  388  ls
+  389  head AlphaFold_final.tsv 
+  390  cd
+  391  cd Downloads/
+  392  ls
+  393  head GDS3712.soft
+  394  more GDS3712.soft
+  395  more GDS3712_full.soft
+  396  more GDS3712.soft 
+  397  grep GATM GDS3712.soft 
+  398  r
+  399  R
+  400  grep GATM GPL6887.txt 
+  401  head GPL6887.txt 
+  402  head -n20 GPL6887.txt 
+  403  head -n50 GPL6887.txt 
+  404  grep CKB GPL6887.txt 
+  405  ls
+  406  cd Downloads/
+  407  ls
+  408  sudo apt install ./rstudio-2024.04.1-748-amd64.deb
+  409  sudo apt autoremove
+  410  cd /media/jpmslima/data3
+  411  wget https://rest.uniprot.org/uniprotkb/Q6P461.fasta
+  412  ls
+  413  mv Q6P461.fasta Q6P461-WT.fasta 
+  414  grep Q6P461 AlphaMissense_aa_substitutions.tsv 
+  415  grep 'Q6P461.*V472I' AlphaMissense_aa_substitutions.tsv 
+  416  cd 
+  417  cd Download
+  418  cd Downloads
+  419  ls
+  420  mkdir blast
+  421  sudo apt install ncbi-blast+
+  422  history | grep makeblastdb
+  423  cd blast/
+  424  cp ~/Downloads/Seqs1aquestao.fasta 
+  425  cp ~/Downloads/Seqs1aquestao.fasta ~/Downloads/blast/Seqs1.fasta
+  426  ls
+  427  makeblastdb -dbtype prot -in Seqs1.fasta -title 1aQuestao -out 1aQuestao
+  428  ls
+  429  more Seqs1.fasta 
+  430  nano query
+  431  ls
+  432  history | grep blastp
+  433  nano padrao1
+  434  ls
+  435  psiblast -query query -db 1aQuestao -phi_pattern padrao1 
+  436  mv query query.fasta
+  437  psiblast -query query.fasta -db 1aQuestao -phi_pattern padrao1 
+  438  nano query.fasta 
+  439  psiblast -query query.fasta -db 1aQuestao -phi_pattern padrao1 
+  440  nano Prot1A
+  441  nano query.fasta
+  442  more Prot1A 
+  443  nano query.fasta
+  444  nano query1.fasta
+  445  ls
+  446  mv Prot1A Prot1A.fasta
+  447  makeblastdb -dbtype prot -in Prot1A.fasta -title 1aQuestao -out 1aQuestao
+  448  ls
+  449  psiblast -query query1.fasta -db 1aQuestao -phi_pattern padrao1
+  450  psiblast -query Prot1A.fasta -db 1aQuestao -phi_pattern padrao1
+  451  psiblast -query Prot1A.fasta -db 1aQuestao -phi_pattern padrao1 > phi
+  452  more Prot1A.fasta 
+  453  nano query10.fasta
+  454  psiblast -query query10.fasta -db 1aQuestao -phi_pattern padrao1
+  455  ls
+  456  sh get-pdb.sh 
+  457  ls
+  458  grep SSBOND *.pdb
+  459  grep SSBOND 5Z62.pdb
+  460  cd Downloads/
+  461  cd blast
+  462  ls
+  463  sudo apt install ncbi-blast+
+  464  more Prot1A.
+  465  more Prot1A.fasta 
+  466  makeblastdb -dbtype prot -in Prot1A.fasta -title 1aQuestao -out 1aQuestao
+  467  nano padrao1 
+  468  psiblast -query Prot1A.fasta -db 1aQuestao -phi_pattern padrao1
+  469  ls
+  470  grep SSBOND *.pdb
+  471  grep 'ENST00000278893.11' AlphaMissense_isoforms_aa_substitutions.tsv > ENST00000278893.11
+  472  grep ENST00000407022.7 AlphaMissense_isoforms_aa_substitutions.tsv 
+  473  grep 'ENST00000407022.7' AlphaMissense_isoforms_aa_substitutions.tsv 
+  474  grep 'ENST00000407022.7' AlphaMissense_isoforms_aa_substitutions.tsv > ENST00000407022.7
+  475  grep 'ENST00000360796.9' AlphaMissense_isoforms_aa_substitutions.tsv > ENST00000360796.9
+  476  htop
+  477  head all-seipin.tsv 
+  478  ls
+  479  wc -l AlphaMissense_aa_substitutions.tsv 
+  480  grep 'Q01959' AlphaMissense_aa_substitutions.tsv > ritalintarget.tsv
+  481  cd Downloads/
+  482  ls
+  483  wc -l ST1Tumor-ST1Normal.tsv 
+  484  ls
+  485  head all-seipin.tsv 
+  486  grep N88 all-seipin.tsv 
+  487  ls
+  488  sudo apt install ./rstudio-2024.04.2-764-amd64.deb
+  489  ls
+  490  head GSE194315_CellMetadata-AS_TotalCiteseq_20220711.tsv
+  491  head GSE194315_CellMetadata-PSA_TotalCiteseq_20220711.tsv
+  492  head GSE194315_CellMetadata-PSA_TotalCiteseq_20220103.tsv
+  493  neofetch
+  494  htop
+  495  sh get_sequences.sh 
+  496  git config pull.rebase false
+  497  efetch -db nuccore -id XM_012192586.1 -format fasta
+  498  efetch -db nuccore -id XM_012192586.1 -format fasta_cds_na
+  499  efetch -db nuccore -id XM_012192586.1 -format fasta_cds_aa
+  500  history
+  501  grep P50440 AlphaMissense_aa_substitutions.tsv 
+  502  grep P50440 AlphaMissense_aa_substitutions.tsv > P50440-pred.tsv
+  503  grep Q14353 AlphaMissense_aa_substitutions.tsv > Q14353-pred.tsv
+  504  grep P48029 AlphaMissense_aa_substitutions.tsv > P48029-pred.tsv
+  505  grep P12277 AlphaMissense_aa_substitutions.tsv > P12277-pred.tsv
+  506  grep P06732 AlphaMissense_aa_substitutions.tsv > P06732-pred.tsv
+  507  grep P12532 AlphaMissense_aa_substitutions.tsv > P12532-pred.tsv
+  508  grep P48065 AlphaMissense_aa_substitutions.tsv > P48065-pred.tsv
+  509  grep P31749 AlphaMissense_aa_substitutions.tsv > P31749-pred.tsv
+  510  grep P31751 AlphaMissense_aa_substitutions.tsv > P31751-pred.tsv
+  511  grep Q9Y243 AlphaMissense_aa_substitutions.tsv > Q9Y243-pred.tsv
+  512  grep P05019 AlphaMissense_aa_substitutions.tsv > P05019-pred.tsv
+  513  head AlphaMissense_aa_substitutions.tsv 
+  514  cd Downloads/
+  515  ls
+  516  sudo apt install ./code_1.91.0-1719861592_amd64.deb
+  517  r
+  518  lshw
+  519  sudo lshw
+  520  sudo lshw > hw
+  521  vmd
+  522  ls
+  523  sh update.sh
+  524  aptitude search vmd
+  525  cd Downloads/
+  526  ls
+  527  tar -xvzf vmd-1.9.3.bin.LINUXAMD64-CUDA8-OptiX4-OSPRay111p1.opengl.tar.gz 
+  528  cd vmd-1.9.3/
+  529  ls
+  530  more README 
+  531  ./configure
+  532  make install
+  533  ls
+  534  cd src/
+  535  make install
+  536  vmd
+  537  ls
+  538  cd ..
+  539  ls
+  540  cd ..
+  541  ls
+  542  diff ENST00000278893.11.pdb ENST00000360796.10.pdb 
+  543  diff ENST00000278893.11.pdb ENST00000360796.10.pdb > diff
+  544  vmd
+  545  sudo sh update.sh 
+  546  neofetch
+  547  vmd
+  548  sudo sh update.sh 
+  549  sudo distro-upgrade
+  550  sudo dist-upgrade
+  551  apt install mintupgrade
+  552  sudo mintupgrade
+  553  neofetch
+  554  aptitude search chimera
+  555  rm -rf `chimera --root
+  556  rm -rf `chimera --root`
+  557  rm -rf chimera --root
+  558  rm -rf 
+  559  chimera --root
+  560  chimera
+  561  cd /usr/local/
+  562  ls
+  563  cd
+  564  cd .chimera/
+  565  ls
+  566  cd ..
+  567  cd Downloads/
+  568  ls
+  569  sudo apt install ./ucsf-chimerax_1.8ubuntu24.04_amd64.deb
+  570  ls
+  571  chmod u+x chimera-1.18-linux_x86_64.bin 
+  572  ./chimera-1.18-linux_x86_64.bin 
+  573  sudo chmod u+x chimera-1.18-linux_x86_64.bin 
+  574  ./chimera-1.18-linux_x86_64.bin 
+  575  chimera
+  576  babel
+  577  obabel
+  578  cd Downloads
+  579  ls
+  580  nano mol1.smi
+  581  obabel -ismi mol1.smi -omol2 moli1.mol2 --gen3D
+  582  obabel -ismi mol1.smi -omol2 mol1.mol2 --gen3D
+  583  obabel -ismi mol1.smi -omol2 mol1.mol2 --gen3D -fmol1 - mol1
+  584  obabel -h
+  585  obabel -H
+  586  obabel -i smi mol1.smi -o mol2 mol1.mol2 --gen3D -fmol1 - mol1
+  587  obabel -i smi mol1.smi -o mol2 mol1.mol2 --gen3D -f 1 -l 1
+  588  obabel -i smi mol1.smi -O mol2 mol1.mol2 --gen3D -f 1 -l 1
+  589  ls
+  590  obabel -i smi mol1.smi -0 mol2 mol1.mol2 --gen3D -f 1 -l 1
+  591  ls *.smi
+  592  more mol1
+  593  more mol1.mol2
+  594  obabel -i smi mol1.smi -O mol1.mol2 --gen3D -f 1 -l 1
+  595  more mol1.mol2
+  596  ls -la
+  597  sudo fc-cache -fv
+  598  htop
+  599  sudo fc-cache -fv
+  600  vmd
+  601  eject -rt
+  602  eject -r
+  603  sudo eject -r
+  604  ls
+  605  mkdocs build
+  606  pip install mkdocs
+  607  sudo apt install python-pip
+  608  sudo apt install python3-pip
+  609  pip install mkdocs
+  610  sudo apt install python3-mkdocs
+  611  sudo apt install pipx
+  612  pipx install mkdocs
+  613  lshw
+  614  sudo lshw
+  615  ls
+  616  sudo sh update.sh 
+  617  sudo apt install ./wps-office_11.1.0.11723.XA_amd64.deb
+  618  cd Downloads/
+  619  sudo apt install ./wps-office_11.1.0.11723.XA_amd64.deb
+  620  ls
+  621  exit
+  622  ls
+  623  maridb -u jpmslima -p
+  624  exit
+  625  mariadb
+  626  sudo systemctl status mariadb
+  627  sudo mariadb -u root -p
+  628  sudo mariadb -u jpmslima -p
+  629  mariadb -u jpmslima -p
+  630  sudo mariadb -u root -p
+  631  mariadb -u jpmslima -p
+  632  sudo mariadb -u root -p
+  633  sudo mariadb -u jpmslima -p
+  634  mariadb -u jpmslima -p
+  635  aptitude search wps
+  636  sudo apt remove wps-office 
+  637  ls
+  638  gzip -dv *.gz
+  639  cd ..
+  640  cd cif
+  641  gzip -dv *.gz
+  642  ls
+  643  sh ring-sh.sh 
+  644  ring
+  645  obabel
+  646  history | grep obabel
+  647  obabel -i smi CC(C)C1=NC(=NC(=C1/C=C/[C@H](C[C@H](CC(=O)O)O)O)C2=CC=C(C=C2)F)N(C)S(=O)(=O)C -O mol2 rosu.mol2 --gen3D -f 1 -l 1
+  648  obabel -h
+  649  obabel --help
+  650  obabel -L
+  651  obabel -L formats
+  652  obabel  CC(C)C1=NC(=NC(=C1/C=C/[C@H](C[C@H](CC(=O)O)O)O)C2=CC=C(C=C2)F)N(C)S(=O)(=O)C -O mol2 rosu.mol2 --gen3D -f 1 -l 1
+  653  obabel CC(C)C1=NC(=NC(=C1/C=C/[C@H](C[C@H](CC(=O)O)O)O)C2=CC=C(C=C2)F)N(C)S(=O)(=O)C -O mol2 rosu.mol2 --gen3D -f 1 -l 1
+  654  obabel -i CC(C)C1=NC(=NC(=C1/C=C/[C@H](C[C@H](CC(=O)O)O)O)C2=CC=C(C=C2)F)N(C)S(=O)(=O)C -O mol2 rosu.mol2 --gen3D -f 1 -l 1
+  655  obabel -L 
+  656  obabel --help
+  657  obabel
+  658  obabel -L formats
+  659  nano asp.smi
+  660  obabel -i smi asp.smi -O mol2 asp.mol2 --gen3D
+  661  ls *.mol2
+  662  ls 
+  663  obabel -i smi asp.smi -o mol2 asp.mol2 --gen3D
+  664  obabel -i smi asp.smi -O mol2 --gen3D
+  665  more mol2
+  666  obabel -i smi asp.smi -O mol2 asp.mol --gen3D
+  667  obabel -i smi asp.smi -O mol asp.mol2 --gen3D
+  668  obabel -i smi asp.smi -Omol asp.mol2 --gen3D
+  669  obabel --help
+  670  obabel -i smi asp.smi -O asp.mol2 --gen3D
+  671  efetch
+  672  efetch -db
+  673  efetch -db pubchem
+  674  efetch -h
+  675  wget https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/446157/property/CanonicalSMILES/TXT
+  676  more TXT
+  677  wget https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/446157/property/CanonicalSMILES/TXT > 446157.smi
+  678  more TXT.1
+  679  ssh jpmslima@10.7.41.184 -p4422
+  680  sudo lshw
+  681  python pre-processing-1.py 
+  682  python pre-processing-1.py 
+  683  pip install pandas
+  684  python pre-processing-1.py 
+  685  sh get_sequences.sh 
+  686  python Corins-0.5.py 
+  687  python First.py 
+  688  cd test1/
+  689  ls
+  690  python network_analysis.py 
+  691  ring
+  692  history
+  693  history | grep export
+  694  exit
+  695  history
+  696  ssh jpmslima@10.7.41.184 -p4422
+  697  grep TER AF-P03891-F1-model_v4_trajectory.pdb | wc -l
+  698  vmd
+  699  pip install pandas
+  700  sudo apt install python3-pandas
+  701  wget 
+  702  wget --help
+  703  wget https://www.omim.org/allelicVariants/142910 -o HMDH_Human_Omim.txt
+  704  wget https://www.omim.org/allelicVariants/142910
+  705  nano 142910 
+  706  wget https://www.omim.org/allelicVariants/142910?format=tsv
+  707  nano 142910\?format\=tsv 
+  708  wget https://www.omim.org/allelicVariants/142910?format=tsv -o 142910.tsv
+  709  nano 142910.tsv 
+  710  wget --help
+  711  wget https://www.omim.org/allelicVariants/142910?format=tsv -O 142910.tsv
+  712  nano 142910.tsv 
+  713  efetch -db swissprot -id P54868 -format fasta_cds_na > HMGCS2_CDS_sequence.fasta
+  714  efetch -db protein -id P54868 -format fasta_cds_na > HMGCS2_CDS_sequence.fasta
+  715  efetch
+  716  efetch --help
+  717  efetch -db nuccore -id NM_005518.4 -format fasta > HMGCS2_coding_sequence.fasta
+  718  efetch -db nuccore -id NM_005518.4 -format fasta_cds_aa > HMGCS2_AA_sequence.fasta
+  719  efetch -db gene -id 3156 -format tabular > HMGCS2_gene_info.tsv
+  720  efetch -db gene -id 3158 -format tabular > HMGCS2_gene_info.tsv
+  721  efetch -db gene -id 3156 -format tabular > HMGCL_gene_info.tsv
+  722  history | grep ssh
+  723  ssh jpmslima@10.7.41.184 -p4422
+  724  ls *.pem
+  725  ssh -i carindb.pem imd@10.7.40.207
+  726  ssh jpmslima@10.7.40.207 -p
+  727  ssh jpmslima@10.7.40.207 -p4422
+  728  aptitude search seaborn
+  729  sudo apt install python3-seaborn 
+  730  csplit -z AF-P03891-F1-model_v4_trajectory.pdb '/MODEL/' '{*}'
+  731  cat xx01 xx02 xx03 xx04 xx05 xx06 xx07 xx08 xx09 xx10
+  732  cat xx01 xx02 xx03 xx04 xx05 xx06 xx07 xx08 xx09 xx10 > pdbteste.pdb
+  733  sed 's/^\(ATOM.\{17\}\) /\1A/' pdbteste.pdb > test.pdb
+  734  sed 's/^\(ATOM.\{17\}\) /\1A/' pdbtesteX.pdb > Trajectorytest.pdb
+  735  python pre-processing-1.py
+  736  python network_analysis.py 
+  737  python plot1.py 
+  738  tr ',' '\t' < P03891-RMSD-All.csv > P03891-RMSD-All.tsv
+  739  ls
+  740  cd P03891/
+  741  ls
+  742  history | grep ssh
+  743  ssh jpmslima@10.7.41.184 -p4422
+  744  grep P03891 AlphaMissense_aa_substitutions.tsv > P03891-pred.tsv
+  745  more P03891-pred.tsv 
+  746  vmd
+  747  htop
+  748  python plot1.py 
+  749  python network_analysis.py 
+  750  streamlit run SlytheRINs_app.py 
+  751  python SlytheRINs-V1-dash.py 
+  752  pipx install dash
+  753  pip intall dash
+  754  pip isntall dash
+  755  pip install dash
+  756  streamlit SlytheRINs_app.py 
+  757  streamlit run SlytheRINs_app.py 
+  758  pipx install networkx
+  759  pip install networkx
+  760  sudo apt install python3-networkx
+  761  streamlit run SlytheRINs_app.py 
+  762  pip install streamlit
+  763  sudo apt install python3-streamlit
+  764  aptitude search streamlit
+  765  pip
+  766  sudo pip install streamlit
+  767  sudo apt install pipx
+  768  pipx install streamlit
+  769  pipx install dash
+  770  dash
+  771  cd coding/CoRINs2/test1/
+  772  ls
+  773  dash
+  774  pyhton SlytheRINs-V1-dash.py 
+  775  python SlytheRINs-V1-dash.py 
+  776  aptitude search pyhton3-dash
+  777  aptitude search dash
+  778  sudo groupadd docker
+  779  sudo usermod -aG docker jpmslima
+  780  mkdocs
+  781  ls
+  782  head -n50 AF-P03891-F1-model_v4_trajectory.pdb
+  783  head -n50 Trajectorytest.pdb 
+  784  head -n100 Trajectorytest.pdb 
+  785  history | grep ssh
+  786  ssh jpmslima@10.7.41.184 -p4422
+  787  ssh matheus@10.7.41.184 -p4422
+  788  ssh jpmslima@10.7.41.184 -p4422
+  789  git clone https://github.com/hawaiidatascience/metaflowmics
+  790  ls
+  791  cd metaflowmics/
+  792  ls
+  793  metaflowmics/
+  794  cd metaflowmics/
+  795  ls
+  796  cd Pipeline-
+  797  cd Pipeline-ITS/
+  798  lls
+  799  ls
+  800  java - version
+  801  curl -s https://get.sdkman.io | bash
+  802  sdk install java 17.0.10-tem
+  803  source "/home/jpmslima/.sdkman/bin/sdkman-init.sh"
+  804  sdk install java 17.0.10-tem
+  805  java - version
+  806  vmd
+  807  vnc
+  808  vmd
+  809  java --version
+  810  curl -s https://get.nextflow.io | bash
+  811  history | grep export
+  812  export PATH=$PATH:/media/jpmslima/data2/metaflowmics
+  813  echo $PATH
+  814  ls
+  815  chmod +x nextflow
+  816  mv nextflow $HOME/.local/bin/
+  817  history
+  818  echo $PATH:/home/jpmslima/.local/bin
+  819  export PATH=$PATH:/home/jpmslima/.local/bin
+  820  ls
+  821  echo $PATH
+  822  nextflow info
+  823  nextflow self-update
+  824  neofetch
+  825  cd
+  826  cd Downloads/
+  827  ls
+  828  sudo apt install ./singularity-ce_4.2.1-noble_amd64.deb
+  829  pipx install ITSxpress
+  830  sudo apt install vsearch hmmer bbtools
+  831  cd /media/jpmslima/data2
+  832  ls
+  833  cd metaflowmics/metaflowmics/
+  834  ls
+  835  nextflow run ITS-pipeline -profile singularity --reads "../tests/ITS/"
+  836  nextflow run Pipeline-ITS -profile singularity --reads "../tests/ITS/"
+  837  nextflow run Pipeline-ITS -profile docker --reads "../tests/ITS/"
+  838  aptitude search dada2
+  839  aptitude search mothur
+  840  aptitude search holoviews
+  841  sudo apt install r-bioc-dada2 mothur
+  842  nextflow run Pipeline-ITS -profile local --reads "../tests/ITS/"
+  843  conda --version
+  844  conda
+  845  aptitude search conda
+  846  aptitude search conda
+  847  nextflow run Pipeline-ITS -profile local --reads "../tests/ITS/"
+  848  nextflow run Pipeline-ITS -profile singularity --reads "../tests/ITS/"
+  849  nextflow run Pipeline-ITS -profile docker --reads "../tests/ITS/"
+  850  nextflow run Pipeline-ITS -profile docker --reads "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS"
+  851  nextflow run Pipeline-ITS -profile docker --reads "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/"
+  852  nextflow run Pipeline-ITS -profile docker --singularity "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/"
+  853  nextflow run Pipeline-ITS -profile local --singularity "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/"
+  854  nextflow run Pipeline-ITS -profile local --singularity "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/*.gz"
+  855  nextflow run Pipeline-ITS -profile local --singularity "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/ITS"
+  856  nextflow run Pipeline-ITS -profile local --singularity "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/ ITS"
+  857  nextflow run pipeline_ITS -profile local --singularity "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/"
+  858  nextflow run Pipeline-ITS -profile local --singularity /media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/
+  859  cd ..
+  860  ls
+  861  cd ..
+  862  git clone https://github.com/hawaiidatascience/nextflow_cmaiki.git
+  863  cd nextflow_cmaiki/metagenomics-pipelines
+  864  ls
+  865  cd nextflow_cmaiki/
+  866  cd metaflowmics/
+  867  cd ..
+  868  ls
+  869  cd metaflowmics/
+  870  ls
+  871  nextflow run multithreaded-demux -profile singularity /media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/
+  872  nextflow run multithreaded-demux -profile singularity "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/"
+  873  cd ../..
+  874  ls
+  875  cd metaflowmics/
+  876  ls
+  877  nextflow run Pipeline-ITS -profile docker "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/"
+  878  nextflow run Pipeline-ITS -profile docker "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/pipeline_ITS"
+  879  nextflow run Pipeline-ITS -profile docker "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/pipeline_its"
+  880  nextflow run Pipeline-ITS -profile docker "/media/jpmslima/data2/metaflownomics/metaflowomics/tests/ITS/*.fastq.gz"
+  881  nextflow run Pipeline-ITS -profile docker "/media/jpmslima/data2/metaflownomics/tests/ITS/*.fastq.gz"
+  882  nextflow run Pipeline-ITS -profile docker --reads "/media/jpmslima/data2/metaflowmics/tests/ITS/*.fastq.gz"
+  883  nextflow run Pipeline-ITS -profile singularity --reads "/media/jpmslima/data2/metaflowmics/tests/ITS/*.fastq.gz"
+  884  htop
+  885  history | grep grep
+  886  mkdocs build
+  887  history | grep deploy
+  888  make gh-deploy --forcemd
+  889  mkdocs gh-deploy --forcemd
+  890  mkdocs gh-deploy --force
+  891  mkdocs build
+  892  mkdocs gh-deploy --force
+  893  mkdocs build
+  894  mkdocs gh-deploy --force
+  895  mkdocs build
+  896  mkdocs gh-deploy --force
+  897  mkdocs build
+  898  mkdocs gh-deploy --force
+  899  ls
+  900  cd jpmslima.github.io/
+  901  ls
+  902  mkdocs build
+  903  mkdocs gh-deploy --force
+  904  cd ..
+  905  mkdocs build
+  906  mkdocs gh-deploy --force
+  907  mkdocs build
+  908  mkdocs gh-deploy --force
+  909  vmd
+  910  mkdocs build
+  911  mkdocs gh-deploy --force
+  912  cd jpmslima.github.io/
+  913  mkdocs build
+  914  mkdocs gh-deploy --force
+  915  ls
+  916  sh get_uniprot_sequences.sh 
+  917  sh get_uniprot_sequences.sh
+  918  git remote add origin https://github.com/jpmslima/CysUFC.git
+  919  git branch -M main
+  920  git push -u origin main
+  921  git remote add origin https://github.com/jpmslima/CysUFC.git
+  922  git push -u origin main
+  923  git init
+  924  git commit -m "first commit"
+  925  git branch -M main
+  926  git remote add origin https://github.com/jpmslima/CysUFC.git
+  927  git push -u origin main
+  928  head -n 200 P03923F161L_bd38f_relaxed_rank_001_alphafold2_ptm_model_5_seed_000_trajectory.pdb 
+  929  sh import.sh 
+  930  sh import_pdb.sh 
+  931  grep 'UNP' *.pdb > UNPs
+  932  git pull
+  933  git branch --set-upstream-to=ProtPlots/<branch> main
+  934  pip install streamlit plotly pandas
+  935  sudo apt install python3-streamlit
+  936  sudo pip install streamlit
+  937  pipx install streamlit
+  938  streamlit run ProtPlots.py 
+  939  pipx install plotly
+  940  sudo pip install python3-plotly
+  941  sudo apt install python3-plotly
+  942  streamlit run ProtPlots.py 
+  943  pip install plotly
+  944  sudo apt install python3-pipx
+  945  sudo apt install pipx
+  946  pipx ensurepath
+  947  pipx install plotly
+  948  pipx install plotly==6.0.0rc0
+  949  pip install plotly==6.0.0rc0
+  950  aptitude search plotly
+  951  streamlit run ProtPlots.py 
+  952  pip install -U kaleido
+  953  pipx install kaleido
+  954  cd tsv
+  955  cd tsvs
+  956  grep 'GATM' ARxTX.tsv 
+  957  grep 'SLC2A4' *.tsv 
+  958  nvtop
+  959  wget https://www.rcsb.org/fasta/entry/1STF
+  960  ls
+  961  more 1STF 
+  962  vmd
+  963  nvtop
+  964  vmd
+  965  htop
+  966  sudo apt update && sudo apt upgrade
+  967  sudo apt autoremove
+  968  cd /media/jpmslima/data1
+  969  ls
+  970  cd rnaseq/
+  971  ls
+  972  sudo apt install sra-toolkit 
+  973  sh get_data_Cprocera.sh 
+  974  fastqc
+  975  ls
+  976  head -n50 SRR18138579
+  977  head -n50 SRR18138579_1.fastq 
+  978  grep -n '>@' SRR18138579_1.fastq
+  979  grep -n '^@' SRR18138579_1.fastq
+  980  grep -nc '>@' SRR18138579_1.fastq
+  981  history
+  982  sudo apt install sra-toolkit 
+  983  history > comandos091224.txt

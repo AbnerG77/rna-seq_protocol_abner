@@ -1,0 +1,10 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR10207210_1	/home/lima/rnaseq-protocol/fastQC/SRR10207210_1_fastqc.zip
+FastQC	all_sections	SRR10207212_2	/home/lima/rnaseq-protocol/fastQC/SRR10207212_2_fastqc.zip
+FastQC	all_sections	SRR10207206_1	/home/lima/rnaseq-protocol/fastQC/SRR10207206_1_fastqc.zip
+FastQC	all_sections	SRR10207206_2	/home/lima/rnaseq-protocol/fastQC/SRR10207206_2_fastqc.zip
+FastQC	all_sections	SRR10207210_2	/home/lima/rnaseq-protocol/fastQC/SRR10207210_2_fastqc.zip
+FastQC	all_sections	SRR10207204_1	/home/lima/rnaseq-protocol/fastQC/SRR10207204_1_fastqc.zip
+FastQC	all_sections	SRR10207212_1	/home/lima/rnaseq-protocol/fastQC/SRR10207212_1_fastqc.zip
+FastQC	all_sections	SRR10207204_2	/home/lima/rnaseq-protocol/fastQC/SRR10207204_2_fastqc.zip
+FastQC	all_sections	SRR10207216_1	/home/lima/rnaseq-protocol/fastQC/SRR10207216_1_fastqc.zip
